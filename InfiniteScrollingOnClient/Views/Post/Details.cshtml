@@ -1,0 +1,26 @@
+@model InfiniteScrollingOnClient.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Post</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">@Model.Title</div>
+
+    <div class="display-label">Text</div>
+    <div class="display-field">@Model.Text</div>
+
+    <div class="display-label">Author</div>
+    <div class="display-field">@Model.Author</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+

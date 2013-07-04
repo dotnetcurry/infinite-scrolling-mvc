@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Posts";
+}
+
+<h2 style="text-align:center">Posts</h2>
+<section data-bind="foreach: posts">
+    <div style="width: 25%; height: auto; float: left; text-align: right;
+    padding: 55px 20px 0px 0px">
+        <h3>
+            <label data-bind="text: Author"></label>
+        </h3>
+    </div>
+    <div style="width: 60%; height: auto; float: left">
+        <h1>
+            <label data-bind="text: Title"></label>
+        </h1>
+        <label data-bind="text: Text"></label>
+    </div>
+</section>
+
+@section Scripts{
+    <script src="~/Scripts/knockout-2.2.0.debug.js"></script>
+    <script src="~/Scripts/infiniteScroll.js"></script>
+}
